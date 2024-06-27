@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mi Tamagotchi</h1>
+    <div id="tamagotchi">
+        <img id="helloKitty" src="images/hello_kitty.png" alt="Hello Kitty">
+        <p>Nombre: <span id="name">Tama</span></p>
+        <p>Salud: <span id="health">100</span></p>
+        <div class="circle-container">
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="45"></circle>
+                <circle id="healthCircle" cx="50" cy="50" r="45"></circle>
+            </svg>
+        </div>
+        <p>Energía: <span id="energy">100</span></p>
+        <p>Estado: <span id="status">Normal</span></p>
+        <button id="feedButton">Alimentar</button>
+        <button id="playButton">Jugar</button>
+        <button id="sleepButton">Dormir</button>
+        <button id="sickButton">Enfermarse</button>
+        <button id="bathroomButton">Ir al baño</button>
+        <button id="exerciseButton">Ejercitarse</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe6f2; /* Fondo rosado claro */
+    padding: 50px;
+}
+
+#tamagotchi {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #ff66b2; /* Borde rosado */
+    border-radius: 10px;
+    background-color: #fff;
+    width: 300px; /* Ajusta el ancho del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+#helloKitty {
+    max-width: 100%; /* Ajusta la imagen para que se ajuste dentro del contenedor */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: #ff66b2; /* Botón rosado */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff3385; /* Botón rosado oscuro */
+}
+
+.circle-container {
+    position: relative;
+    width: 100px;  /* Tamaño del contenedor */
+    height: 100px; /* Tamaño del contenedor */
+    margin: 20px auto;
+}
+
+circle {
+    fill: none;
+    stroke-width: 8;
+}
+
+circle:nth-child(1) {
+    stroke: #ddd;
+}
+
+#healthCircle {
+    stroke: #ff66b2; /* Círculo rosado */
+    stroke-dasharray: 282.6; /* Ajusta la longitud del trazo del círculo */
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
