@@ -5,7 +5,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const statusElement = document.getElementById('status');
     const healthCircle = document.getElementById('healthCircle');
     const kittyImage = document.getElementById('helloKitty');
-    
+
+    // Variables de sonido
+    let winAudio = new Audio('./sounds/win.wav');
+    let loseAudio = new Audio('./sounds/lose.wav');
+    let clickAudio = new Audio('./sounds/click.wav');
+
     // Objeto Tamagotchi
     let tamagotchi = {
         name: "Tama",
@@ -25,6 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 this.updateStatus("Alimentando");
                 this.updateStats();
                 this.animate("feed");
+                clickAudio.play(); // Reproducir sonido al alimentar
             }
         },
 
@@ -42,6 +48,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 this.updateStatus("Jugando");
                 this.updateStats();
                 this.animate("play");
+                winAudio.play(); // Reproducir sonido al jugar
             } else {
                 this.health -= 10;
                 if (this.health < 0) {
@@ -49,6 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
                 this.updateStatus("Cansado");
                 this.updateStats();
+                loseAudio.play(); // Reproducir sonido si está cansado
             }
         },
 
@@ -66,6 +74,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 this.updateStatus("Durmiendo");
                 this.updateStats();
                 this.animate("sleep");
+                clickAudio.play(); // Reproducir sonido al dormir
             }
         },
 
@@ -78,6 +87,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             this.updateStatus("Enfermo");
             this.updateStats();
             this.animate("sick");
+            loseAudio.play(); // Reproducir sonido al enfermarse
         },
 
         // Función para ir al baño
@@ -89,6 +99,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             this.updateStatus("Yendo al baño");
             this.updateStats();
             this.animate("goToBathroom");
+            clickAudio.play(); // Reproducir sonido al ir al baño
         },
 
         // Función para ejercitarse
@@ -105,6 +116,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 this.updateStatus("Ejercitándose");
                 this.updateStats();
                 this.animate("exercise");
+                winAudio.play(); // Reproducir sonido al ejercitarse
             } else {
                 this.health -= 5;
                 if (this.health < 0) {
@@ -112,6 +124,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
                 this.updateStatus("Sin energía para ejercitarse");
                 this.updateStats();
+                loseAudio.play(); // Reproducir sonido si está sin energía para ejercitarse
             }
         },
 
@@ -178,5 +191,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Inicialización de stats
     tamagotchi.updateStats();
 });
+
 
 
