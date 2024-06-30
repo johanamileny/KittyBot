@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let winAudio = new Audio('./sounds/win.wav');
     let loseAudio = new Audio('./sounds/lose.wav');
     let clickAudio = new Audio('./sounds/click.wav');
+    let EventoAudio = new Audio('./sounds/click.wav');
 
     // Objeto Tamagotchi
     let tamagotchi = {
