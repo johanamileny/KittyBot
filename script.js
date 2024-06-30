@@ -187,11 +187,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             tamagotchi.energy -= 1;
         }
         tamagotchi.updateStats();
-    }, 1000);
+    }, 2000); // Actualización cada 2 segundos
 
     // Inicialización de stats
     tamagotchi.updateStats();
 });
+
 
 
 
